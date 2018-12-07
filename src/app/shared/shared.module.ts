@@ -6,6 +6,9 @@ import {CommonModule} from '@angular/common';
   declarations: [
     DropdownDirective
   ],
+  imports: [
+    CommonModule
+  ],
   exports: [
     CommonModule,
     DropdownDirective
