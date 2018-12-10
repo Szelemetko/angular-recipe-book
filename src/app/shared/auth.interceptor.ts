@@ -1,12 +1,12 @@
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {auth} from 'firebase';
 import {Injectable} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {auth} from 'firebase';
+import {Observable} from 'rxjs';
+import {switchMap, take} from 'rxjs/operators';
+import * as fromAuth from '../auth/store/auth.reducers';
 
 import * as fromApp from '../store/app.reducers';
-import * as fromAuth from '../auth/store/auth.reducers';
-import {Store} from '@ngrx/store';
-import {switchMap, take} from 'rxjs/operators';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
